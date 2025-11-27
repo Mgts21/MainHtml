@@ -23,21 +23,35 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      z-index: -2;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
       z-index: -1;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.774);
+      background: rgba(0, 0, 0, 0.68);
       color: white;
       padding: 40px 20px;
       text-align: center;
       font-size: 2rem;
+      position: relative;
+      z-index: 1;
     }
 
     nav {
-      background: rgba(0, 0, 0, 0.774);
+      background: rgba(0, 0, 0, 0.68);
       padding: 15px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     nav a {
@@ -66,6 +80,8 @@
       margin: 40px auto 0;
       background: rgba(0, 0, 0, 0.774);
       border-radius: 12px;
+      position: relative;
+      z-index: 2;
     }
 
     .hero h2 {
@@ -91,7 +107,6 @@
       max-width: 800px;
       margin: auto;
     }
-
 
     .projects {
       display: flex;
@@ -131,7 +146,6 @@
       box-shadow: 0 0 15px #5c9fde;
     }
 
-
     footer {
       background: rgba(0, 0, 0, 0.721);
       color: white;
@@ -139,6 +153,8 @@
       text-align: center;
       font-size: 18px;
       margin-top: 50px;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
@@ -148,6 +164,8 @@
   <video autoplay muted loop id="bg-video">
     <source src="2.mp4" type="video/mp4">
   </video>
+
+  <div class="background-overlay"></div>
 
   <header>
     <h1>Fundamentals of Computing</h1>
@@ -163,11 +181,9 @@
   </nav>
 
   <div class="hero">
-
     <h2>☆ About Me ☆</h2>
 
     <div class="hero-content">
-
       <img src="pic.jpg" class="hero-image" alt="Profile">
 
       <p>
@@ -177,7 +193,6 @@
       </p>
 
       <div class="projects">
-
         <a href="https://mgts21.github.io/Belize-map-game/" class="project-box">
           <img src="belize.jpg">
           <span>Belize Map Game</span>
@@ -197,9 +212,7 @@
           <img src="bmi.jpg">
           <span>BMI Calculator</span>
         </a>
-
       </div>
-
     </div>
   </div>
 
