@@ -23,21 +23,36 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      z-index: -2;
+    }
+
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
       z-index: -1;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.509);
       color: white;
       padding: 40px 20px;
       text-align: center;
       font-size: 2rem;
+      position: relative;
+      z-index: 1;
     }
 
     nav {
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.509);
       padding: 15px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     nav a {
@@ -63,12 +78,11 @@
       color: white;
       font-size: 1.3rem;
       max-width: 1000px;
-
-      /* FIXED: adds space so the box doesn't touch the header */
       margin: 40px auto 0;
-
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.509);
       border-radius: 10px;
+      position: relative;
+      z-index: 2;
     }
 
     .hero img {
@@ -84,12 +98,14 @@
     }
 
     footer {
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.509);
       color: white;
       padding: 20px;
       text-align: center;
       font-size: 18px;
       margin-top: 50px;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
@@ -101,6 +117,8 @@
       src="From KlickPin CF Pin de Crow ) en Game Decoration en 2025 _ Clases de diseño gráfico Gráficos de movimientos Gráfico de movimientos.mp4"
       type="video/mp4">
   </video>
+
+  <div class="background-overlay"></div>
 
   <header>
     <h1>Fundamentals of Computing</h1>
