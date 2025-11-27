@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>3D Graphics terms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #194e6f;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 6px;
+      border: none;
+      background: #4166bd;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    #displayBox {
+      margin-top: 30px;
+      padding: 20px;
+      background: #0e2b3e;
+      border-radius: 10px;
+      font-size: 20px;
+      min-height: 80px;
+    }
+
+    #imageBox {
+      margin-top: 20px;
+    }
+
+    #imageBox img {
+      max-width: 70%;
+      border-radius: 10px;
+      border: 2px solid #9b149e;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>3D Graphics Terms and Definitions </h1>
+  <p>Click a button to learn what each term means.</p>
+
+  <button class="btn" onclick="showContent('modeling')">Modeling</button>
+  <button class="btn" onclick="showContent('rendering')">Rendering</button>
+  <button class="btn" onclick="showContent('displaying')">Displaying</button>
+  <br>
+  <button class="btn" onclick="showContent('framebuffer')">Frame Buffer</button>
+  <button class="btn" onclick="showContent('projection')">Projection Plane</button>
+  <button class="btn" onclick="showContent('viewpoint')">Center of Projection</button>
+
+  <div id="displayBox">Definitions...</div>
+  <div id="imageBox"></div>
+
+  <script>
+    function showContent(term) {
+      const meanings = {
+        modeling: "Modeling is the creation of 3D objects and scenes using shapes, surfaces, and geometry.",
+        rendering: "Rendering calculates lighting, shading, and colors to produce a final 2D image from the 3D scene.",
+        displaying: "Displaying shows the rendered image on the screen from the frame buffer.",
+        framebuffer: "The frame buffer is memory that stores the final pixel image before it is displayed.",
+        projection: "The projection plane is the flat surface onto which 3D objects are projected.",
+        viewpoint: "The center of projection is the viewing point where all projectors converge — like a camera."
+      };
+
+      const images = {
+        modeling: "modeling.jpg",
+        rendering: "Rendering.jpg",
+        displaying: "displaying.jpg",
+        framebuffer: "frame.jpg",
+        projection: "project.jpg",
+        viewpoint: "center.jpg"
+      };
+
+      document.getElementById("displayBox").textContent = meanings[term];
+      document.getElementById("imageBox").innerHTML =
+        `<img src="${images[term]}" alt="${term} image">`;
+    }
+  </script>
+
+</body>
+
+</html>

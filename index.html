@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+      font-size: 1.3rem;
+      max-width: 1000px;
+
+      /* FIXED: adds space so the box doesn't touch the header */
+      margin: 40px auto 0;
+
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .hero img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      text-shadow: 0px 0px 8px black;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.75);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video autoplay muted loop id="bg-video">
+    <source
+      src="From KlickPin CF Pin de Crow ) en Game Decoration en 2025 _ Clases de diseño gráfico Gráficos de movimientos Gráfico de movimientos.mp4"
+      type="video/mp4">
+  </video>
+
+  <header>
+    <h1>Fundamentals of Computing</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Course</a>
+    <a href="project.html">Project</a>
+    <a href="concept.html">Concept</a>
+    <a href="database.html">Database</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="devteam.html">About me</a>
+  </nav>
+
+  <div class="hero">
+    <img src="fd.jpg" alt="fd">
+    <p>This course is an introduction to the fundamentals of Computer Science that will provide students with a
+      foundation for future courses in Computer Science. The course is a broad survey of the discipline through topics
+      that allow students to understand the capabilities of computer systems in terms of: the computer architecture;
+      operating systems and computer networks; software and software development; data organization and visualization;
+      and the potential of computing machines.</p>
+  </div>
+
+  <footer>
+    &copy; powered by ub
+  </footer>
+
+</body>
+
+</html>

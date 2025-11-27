@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Project 1: Not Gate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #70deff;
+      margin: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .input-section,
+    .output-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .input-section button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 2px solid #000;
+      border-radius: 5px;
+      background-color: #7eceff;
+    }
+
+    .input-section button:hover {
+      background-color: #f0f0f0;
+    }
+
+
+    .output-section img {
+      width: 500px;
+      height: 150px;
+      border: 2px solid #000;
+      border-radius: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 16px;
+      text-decoration: none;
+      color: #000;
+      border: 2px solid #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .back-link:hover {
+      background-color: #f0f0f0;
+    }
+
+    footer {
+      background-color: #6666cc;
+      color: #fff;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Project 1: Not Gate</h2>
+  </header>
+
+  <div class="container">
+    <div class="input-section">
+      <h3>Input</h3>
+      <button onclick="changeOutput('1')">ON</button>
+      <button onclick="changeOutput('0')">OFF</button>
+    </div>
+
+    <div class="output-section">
+      <h3>Output</h3>
+      <img id="outputImage" src="not1.jpg" alt="NOT Gate">
+    </div>
+  </div>
+
+  <a href="project.html">Back to Projects</a></h3>
+
+  <footer>
+    @ Powered by UB
+  </footer>
+
+  <script>
+    function changeOutput(state) {
+      if (state === '1') {
+        document.getElementById('outputImage').src = 'not1.jpg';
+      } else {
+        document.getElementById('outputImage').src = 'not2.jpg';
+      }
+
+
+    }
+  </script>
+
+</body>
+
+</html>
